@@ -16,7 +16,7 @@ public class Controller {
 
 
 
-    ArrayList<String> text = new ArrayList<String>();
+//    ArrayList<String> text = new ArrayList<String>();
 
 
 
@@ -24,9 +24,9 @@ public class Controller {
     @FXML
     void click(ActionEvent event){
         String newRow = txtFieldIn.getText();
-        text.add(String.valueOf(newRow));
-        text.add("\n\r");
-        txtAreaOut.setText(String.valueOf(text));
+        txtAreaOut.appendText(newRow);
+        txtAreaOut.appendText("\n\r");
+        txtFieldIn.clear();
 
 
 
